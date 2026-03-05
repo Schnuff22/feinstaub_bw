@@ -11,6 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 url = "https://lupo-cloud.de/air-app/table?component=luft-lqi&id=DEBW118"
 import pandas as pd
+import re
 
 abruf = requests.get(url)
 suppe = BeautifulSoup(abruf.text, "lxml")
